@@ -1,0 +1,102 @@
+version: 1.2
+workflows:
+  - name: GATKSVPipelineSingleSample
+    subclass: WDL
+    primaryDescriptorPath: /wdl/GATKSVPipelineSingleSample.wdl
+    publish: true
+  - name: 01-GatherSampleEvidence
+    subclass: WDL
+    primaryDescriptorPath: /wdl/GatherSampleEvidence.wdl
+    publish: true
+  - name: 02-EvidenceQC
+    subclass: WDL
+    primaryDescriptorPath: /wdl/EvidenceQC.wdl
+    publish: true
+  - name: 03-TrainGCNV
+    subclass: WDL
+    primaryDescriptorPath: /wdl/TrainGCNV.wdl
+    publish: true
+  - name: 04-GatherBatchEvidence
+    subclass: WDL
+    primaryDescriptorPath: /wdl/GatherBatchEvidence.wdl
+    publish: true
+  - name: 05-ClusterBatch
+    subclass: WDL
+    primaryDescriptorPath: /wdl/ClusterBatch.wdl
+    publish: true
+  - name: 06-GenerateBatchMetrics
+    subclass: WDL
+    primaryDescriptorPath: /wdl/GenerateBatchMetrics.wdl
+    publish: true
+  - name: 07-FilterBatchSites
+    subclass: WDL
+    primaryDescriptorPath: /wdl/FilterBatchSites.wdl
+    publish: true
+  - name: 08-FilterBatchSamples
+    subclass: WDL
+    primaryDescriptorPath: /wdl/FilterBatchSamples.wdl
+    publish: true
+  - name: 09-MergeBatchSites
+    subclass: WDL
+    primaryDescriptorPath: /wdl/MergeBatchSites.wdl
+    publish: true
+  - name: 10-GenotypeBatch
+    subclass: WDL
+    primaryDescriptorPath: /wdl/GenotypeBatch.wdl
+    publish: true
+  - name: 11-RegenotypeCNVs
+    subclass: WDL
+    primaryDescriptorPath: /wdl/RegenotypeCNVs.wdl
+    publish: true
+  - name: 12-CombineBatches
+    subclass: WDL
+    primaryDescriptorPath: /wdl/CombineBatches.wdl
+    publish: true
+  - name: 13-ResolveComplexVariants
+    subclass: WDL
+    primaryDescriptorPath: /wdl/ResolveComplexVariants.wdl
+    publish: true
+  - name: 14-GenotypeComplexVariants
+    subclass: WDL
+    primaryDescriptorPath: /wdl/GenotypeComplexVariants.wdl
+    publish: true
+  - name: 15-CleanVcf
+    subclass: WDL
+    primaryDescriptorPath: /wdl/CleanVcf.wdl
+    publish: true
+  - name: 16-RefineComplexVariants
+    subclass: WDL
+    primaryDescriptorPath: /wdl/RefineComplexVariants.wdl
+    publish: true
+  - name: 17-JoinRawCalls
+    subclass: WDL
+    primaryDescriptorPath: /wdl/JoinRawCalls.wdl
+    publish: true
+  - name: 18-SVConcordance
+    subclass: WDL
+    primaryDescriptorPath: /wdl/SVConcordance.wdl
+    publish: true
+  - name: 19-FilterGenotypes
+    subclass: WDL
+    primaryDescriptorPath: /wdl/FilterGenotypes.wdl
+    publish: true
+  - name: 20-AnnotateVcf
+    subclass: WDL
+    primaryDescriptorPath: /wdl/AnnotateVcf.wdl
+    publish: true
+  - name: FilterOutlierSamples
+    subclass: WDL
+    primaryDescriptorPath: /wdl/FilterOutlierSamples.wdl
+    publish: true
+  - name: MainVcfQc
+    subclass: WDL
+    primaryDescriptorPath: /wdl/MainVcfQc.wdl
+    publish: true
+  - name: PlotSVCountsPerSample
+    subclass: WDL
+    primaryDescriptorPath: /wdl/PlotSVCountsPerSample.wdl
+    publish: true
+  - name: VisualizeCnvs
+    subclass: WDL
+    primaryDescriptorPath: /wdl/VisualizeCnvs.wdl
+    publish: true
